@@ -1,0 +1,77 @@
+/* styles.css */
+
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* Encabezado */
+h1, h2, h3 {
+  color: #333;
+}
+
+/* Botones */
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  margin: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Inputs */
+input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="date"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Lista */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+}
+
+/* Sección de Categorías, Clientes, Productos y Proveedores */
+h2 {
+  color: #0056b3;
+}
+
+h3 {
+  color: #555;
+  margin-top: 20px;
+}
+
+/* Contenedores */
+div, section {
+  padding: 20px;
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  margin-top: 20px;
+}

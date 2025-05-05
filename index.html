@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Usuarios</title>
+    <link rel="stylesheet" href='./src/index.css' />
+
+  </head>
+  <body>
+    <h1>Gestión de Usuarios</h1>
+
+    <!-- Test -->
+    <button id="testButton">Probar Conexión</button>
+    <p id="testResult"></p>
+
+    <!-- Login -->
+    <h2>Iniciar Sesión</h2>
+    <input type="text" id="loginUsername" placeholder="Usuario" />
+    <input type="password" id="loginPassword" placeholder="Contraseña" />
+    <button id="loginButton">Iniciar Sesión</button>
+
+    <!-- Registro -->
+    <h2>Registrar Usuario</h2>
+    <input type="text" id="registerName" placeholder="Nombre completo" />
+    <input type="text" id="registerUsername" placeholder="Usuario" />
+    <input type="password" id="registerPassword" placeholder="Contraseña" />
+    <button id="registerButton">Registrar</button>
+
+    <!-- Listar usuarios -->
+    <h2>Lista de Usuarios</h2>
+    <button id="loadUsersButton">Cargar Usuarios</button>
+    <div id="usersList"></div>
+
+    <!-- Actualizar perfil -->
+    <h2>Actualizar Perfil de Usuario</h2>
+    <input type="text" id="updateUserId" placeholder="ID de Usuario" />
+    <input type="text" id="updateUsername" placeholder="Nuevo Nombre de Usuario" />
+    <input type="email" id="updateEmail" placeholder="Nuevo Correo" />
+    <button id="updateUserButton">Actualizar Perfil</button>
+
+    <!-- Eliminar perfil -->
+    <h2>Eliminar Perfil de Usuario</h2>
+    <input type="text" id="deleteUserId" placeholder="ID de Usuario" />
+    <input type="password" id="currentPassword" placeholder="Contraseña Actual" />
+    <button id="deleteUserButton">Eliminar Usuario</button>
+
+    <!-- GESTIÓN DE CATEGORÍAS -->
+<h2>Gestión de Categorías</h2>
+
+<!-- Crear categoría -->
+<h3>Crear Categoría</h3>
+<input type="text" id="catName" placeholder="Nombre de categoría" />
+<input type="text" id="catDescription" placeholder="Descripción" />
+<button id="createCategoryBtn">Crear Categoría</button>
+
+<!-- Obtener todas -->
+<h3>Listar Categorías</h3>
+<button id="getAllCategoriesBtn">Obtener Categorías</button>
+<ul id="categoriesList"></ul>
+
+<!-- Buscar por ID -->
+<h3>Buscar Categoría por ID</h3>
+<input type="text" id="searchCatId" placeholder="ID de categoría" />
+<button id="searchCategoryBtn">Buscar Categoría</button>
+<div id="categoryDetails"></div>
+
+<!-- Actualizar categoría -->
+<h3>Actualizar Categoría</h3>
+<input type="text" id="updateCatId" placeholder="ID" />
+<input type="text" id="updateCatName" placeholder="Nuevo Nombre" />
+<input type="text" id="updateCatDesc" placeholder="Nueva Descripción" />
+<button id="updateCategoryBtn">Actualizar Categoría</button>
+
+<!-- Eliminar categoría -->
+<h3>Eliminar Categoría</h3>
+<input type="text" id="deleteCatId" placeholder="ID de categoría" />
+<button id="deleteCategoryBtn">Eliminar Categoría</button>
+
+
+<!-- GESTIÓN DE CLIENTES -->
+<h2>Gestión de Clientes</h2>
+
+<!-- Crear cliente -->
+<h3>Crear Cliente</h3>
+<input type="text" id="clientName" placeholder="Nombre del cliente" />
+<input type="text" id="clientContact" placeholder="Contacto" />
+<input type="text" id="clientCompany" placeholder="Empresa" />
+<button id="createClientBtn">Crear Cliente</button>
+
+<!-- Obtener todos -->
+<h3>Ver Clientes Activos</h3>
+<button id="getAllClientsBtn">Obtener Clientes</button>
+<ul id="clientsList"></ul>
+
+<!-- Buscar cliente por ID -->
+<h3>Buscar Cliente por ID</h3>
+<input type="text" id="clientIdSearch" placeholder="ID del cliente" />
+<button id="searchClientBtn">Buscar Cliente</button>
+<div id="clientDetails"></div>
+
+<!-- Actualizar cliente -->
+<h3>Actualizar Cliente</h3>
+<input type="text" id="clientIdUpdate" placeholder="ID del cliente" />
+<input type="text" id="clientNameUpdate" placeholder="Nuevo nombre" />
+<input type="text" id="clientContactUpdate" placeholder="Nuevo contacto" />
+<input type="text" id="clientCompanyUpdate" placeholder="Nueva empresa" />
+<button id="updateClientBtn">Actualizar Cliente</button>
+
+<!-- Dar de baja -->
+<h3>Dar de baja a un Cliente</h3>
+<input type="text" id="clientIdDeactivate" placeholder="ID del cliente" />
+<input type="text" id="clientConfirmDeactivate" placeholder="Escribe CONFIRMADO" />
+<button id="deactivateClientBtn">Dar de baja</button>
+
+
+<!-- GESTIÓN DE PRODUCTOS -->
+<h2>Gestión de Productos</h2>
+
+<!-- Crear producto -->
+<h3>Crear Producto</h3>
+<input type="text" id="prodName" placeholder="Nombre del producto" />
+<input type="number" id="prodPrice" placeholder="Precio" />
+<input type="number" id="prodStock" placeholder="Stock" />
+<input type="date" id="prodEntryDate" />
+<input type="text" id="prodCategory" placeholder="ID Categoría" />
+<input type="text" id="prodSupplier" placeholder="ID Proveedor" />
+<button id="createProductBtn">Crear Producto</button>
+
+<!-- Filtrar productos -->
+<h3>Buscar Productos</h3>
+<input type="text" id="filterName" placeholder="Nombre" />
+<input type="text" id="filterCategory" placeholder="ID Categoría" />
+<input type="date" id="filterFromDate" />
+<input type="date" id="filterToDate" />
+<button id="filterProductsBtn">Buscar</button>
+<ul id="productsList"></ul>
+
+<!-- Actualizar producto -->
+<h3>Actualizar Producto</h3>
+<input type="text" id="updateProdId" placeholder="ID del producto" />
+<input type="number" id="updateProdPrice" placeholder="Nuevo precio" />
+<input type="number" id="updateProdStock" placeholder="Nuevo stock" />
+<button id="updateProductBtn">Actualizar</button>
+
+<!-- Eliminar producto -->
+<h3>Eliminar Producto</h3>
+<input type="text" id="deleteProdId" placeholder="ID del producto" />
+<button id="deleteProductBtn">Eliminar</button>
+
+
+
+<!-- GESTIÓN DE PROVEEDORES -->
+<h2>Gestión de Proveedores</h2>
+
+<!-- Crear proveedor -->
+<h3>Crear Proveedor</h3>
+<input type="text" id="provName" placeholder="Nombre del proveedor" />
+<input type="text" id="provContact" placeholder="Contacto" />
+<input type="text" id="provProducts" placeholder="IDs de productos (separados por coma)" />
+<button id="createProveedorBtn">Crear Proveedor</button>
+
+<!-- Ver proveedores activos -->
+<h3>Lista de Proveedores Activos</h3>
+<button id="loadProveedoresBtn">Cargar Proveedores</button>
+<ul id="proveedoresList"></ul>
+
+<!-- Actualizar proveedor -->
+<h3>Actualizar Proveedor</h3>
+<input type="text" id="updateProvId" placeholder="ID del proveedor" />
+<input type="text" id="updateProvName" placeholder="Nuevo nombre" />
+<input type="text" id="updateProvContact" placeholder="Nuevo contacto" />
+<input type="text" id="updateProvProducts" placeholder="Nuevos productos (IDs separados por coma)" />
+<button id="updateProveedorBtn">Actualizar Proveedor</button>
+
+<!-- Dar de baja a proveedor -->
+<h3>Dar de Baja Proveedor</h3>
+<input type="text" id="deleteProvId" placeholder="ID del proveedor" />
+<button id="deactivateProveedorBtn">Dar de baja</button>
+
+
+    <script src="/src/main.jsx"></script>
+  </body>
+</html>
